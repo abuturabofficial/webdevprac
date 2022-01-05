@@ -1,6 +1,7 @@
 body {
   color: #ffffff;
   background-color: #669999;
+  background-image: url(../img/carbon_fibre.png);
   font-size: 16px;
   font-family: sans-serif;
 }
@@ -14,10 +15,28 @@ h1 {
   width: 50%;
 }
 
-
+/* To diplay pictures in the middle */
 .fit-picture {
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 80%;
+  width: 60%;
+  border: 4px;
+  border-color: green;
+  border-style: solid;
+}
+
+.box{
+  margin: 50px;
+  border: 2px;
+  border-color: darkblue;
+  border-style: dotted;
+  padding: 20px;
+  background-image: url(../img/web-dark.png);
+}
+
+.footer {
+  display: block;
+  margin:  auto auto;
+  width: 50%;
 }
