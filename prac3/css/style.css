@@ -14,7 +14,7 @@ header {
   background-color: #163036;
   text-align: center;
   text-transform: uppercase;
-  margin: 10px 10px ;
+  margin: 10px 10px;
   padding-top: 20px;
   padding-bottom: 20px;
   font-size: 34px;
@@ -26,20 +26,37 @@ section {
   float: right;
   width: 70%;
   font-size: 18px;
+  font-weight: normal;
   text-align: center;
   text-align: justify;
   height: auto;
   padding: auto;
 }
 
+.rightcontainer{
+  background-color: #163036; /* TODO: proper align the text and container to the side */
+  padding-top: auto;
+  padding-left: auto;
+  padding-right: auto;
+  padding-bottom: auto;
+  margin-left: 10px;
+  top: auto;
+  bottom: auto;
+  height: 64%;
+  left: auto;
+  right: auto;
+  position: absolute;
+}
+
 aside {
   float: left;
   width: 25%;
+  text-align: center;
+  text-align: justify;
   font-size: 18px;
   color: #ffffff;
-  height: auto;
-  padding: auto;
-
+  /* height: auto; */
+  /* padding: auto; */
 }
 
 footer {
@@ -51,7 +68,6 @@ footer {
   text-transform: uppercase;
   padding-top: 30px;
   padding-bottom: 30px;
-  clear: both;
   position: absolute;
   bottom: 10px;
   width: 100%;
@@ -61,12 +77,14 @@ footer {
 
 a:link {
   color: #32b7d1;
+  text-decoration: none;
 }
 
 a:visited {
-  color: #557d58;
+  color: #63b269;
 }
 
 a:hover {
-  color: #613a43;
+  color: #d14162;
+  text-decoration: underline;
 }
