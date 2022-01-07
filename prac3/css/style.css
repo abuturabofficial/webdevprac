@@ -26,6 +26,8 @@ section {
   float: right;
   width: 70%;
   font-size: 18px;
+  text-align: center;
+  text-align: justify;
   height: auto;
   padding: auto;
 }
