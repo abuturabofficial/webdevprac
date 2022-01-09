@@ -1,0 +1,19 @@
+.cool {
+  background-color: pink;
+  font-family: Verdana, sans-serif;
+}
+
+#iamid {
+  color: blue;
+  font-size: 36px;
+}
+
+.cool.cooler {
+  font-size: 24px;
+}
+
+#iamid2 {
+  background-color: lightgreen;
+  font-size: 24px;
+  font-weight: bold;
+}
