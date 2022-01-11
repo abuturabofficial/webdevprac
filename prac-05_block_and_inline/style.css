@@ -1,0 +1,32 @@
+/* text-align: center; makes the boxes properly margined on the left and right extremes as we are using 45% width for all the boxes, that's they align themselves in the center with 45% in the width from the center. */
+* {
+  text-align: center;
+}
+.box-one {
+  background-color: lightblue;
+  display: inline-block;
+  width: 45%;
+  padding: 10px;
+  margin: 0 0 10px 0;
+}
+
+.box-two {
+  background-color: lightslategrey;
+  display: inline-block;
+  width: 45%;
+  padding: 10px;
+}
+
+.box-three {
+  background-color: pink;
+  display: inline-block;
+  width: 45%;
+  padding: 10px;
+}
+
+.box-four {
+  background-color: lightcoral;
+  display: inline-block;
+  width: 45%;
+  padding: 10px;
+}
