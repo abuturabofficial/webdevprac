@@ -1,20 +1,21 @@
 .flex-container {
-  /* height: 500px; */
+  height: 600px;
   padding: 18px;
   background-color: lightblue;
-  /* flex-direction: row; */
+  flex-direction: row;
+  align-items: stretch;
   border: 2px solid red;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
+  /* justify-content: center; */
+  /* align-items:flex-end; */
+  /* gap: 10px; */
 }
 
 .child-item {
   background-color: pink;
   border: 2px solid red;
-  height: 200px;
-  width: 300px;
+  /* height: 200px; */
+  /* width: 300px; */
   /* flex: 3 2 auto; */
 }
 
