@@ -24,6 +24,7 @@ body {
   background: #eee;
   color: darkmagenta;
   display: flex;
+  flex-shrink: 0;
   justify-content: center;
   align-items: center;
   margin-top: auto;
@@ -37,6 +38,12 @@ body {
 
 ul {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  margin-bottom: 16px;
 }
 
 a {
@@ -49,9 +56,9 @@ a {
   border: 1px solid #eee;
   box-shadow: 2px 4px 16px rgba(0, 0, 0, 0.06);
   border-radius: 4px;
-  width: 400px;
-  height: 450px;
   padding: 16px;
+  margin: 16px;
+  width: 300px;
 }
 
 .main {
