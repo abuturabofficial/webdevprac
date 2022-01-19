@@ -4,6 +4,8 @@
 /dist
 /tmp
 /out-tsc
+#Css stylint config
+.stylelintrc.json
 
 # Runtime data
 pids
