@@ -7,6 +7,9 @@
 #Css stylint config
 .stylelintrc.json
 
+#Eslint config
+.eslintrc.js
+
 # Runtime data
 pids
 *.pid
