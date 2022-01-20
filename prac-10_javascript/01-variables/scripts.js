@@ -12,7 +12,7 @@
 // console.log(user,age,message)
 // alert(user)
 // alert(age)
-// alert(message) // Using single line variables is not recommedded
+// alert(message) // Using single line variables is not recommended
 
 // Two other ways of declaring variables
 // let user = 'John',
@@ -44,4 +44,3 @@
 // Declaring a same variable twice throws Syntax Error
 // let message = 'This'
 // let message = 'that'
-
