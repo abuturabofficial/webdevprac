@@ -246,7 +246,6 @@ The `div` element, also known as a division element, is a general purpose contai
 </html>
   #+end_export
 
-
 * Define the Head and Body of an HTML Document
 
 + You can add another level of organization in your HTML document within the `html` tags with the `head` and `body` elements.
