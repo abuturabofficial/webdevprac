@@ -1,0 +1,268 @@
+#+title: 01 HTML and HTML5
+#+author: Sajid Mahmood
+#+source: Basic HTML and HTML5
+#+include: Basic Web Design Certifiction
+#+week: Week 1
+#+date: <2022-04-18 Mon>
+#+options: toc:2
+
+* HTML Headings
+
+There are six types of headings
+    1. h1
+    2. h2
+    3. h3
+    4. h4
+    5. h5
+    6. h6
+
+** HTML comments
+
+'Commenting is a way that you can leave comments for other developers within your code without affecting the resulting output that is displayed to the end user.'
+
++ Commenting is also a convenient way to make code inactive without having to delete it entirely.
++ Comments in HTML starts with <!-- and end with a -->
+
+* Introduction to HTML5 Elements
+
+HTML5 introduces more descriptive HTML tags.
++ They include main, header, footer, nav, video, article, section and others
++ These tags give descriptive structure to your HTML, make your HTML easier to read.
++ They also help with search engines optimization (SEO) and accessibility
++ The 'main' HTML5 tag helps search engines and other developers find the main content of your page.
+
+** img element
+
+You can add images to your website by using the `img` element, and point to a specific to a specific image's URL using the `src` attribute
+
+#+begin_export html
+<img src="https://www.example.com/image.jgp">
+#+end_export
+
++ `img` elements are self-closing.
++ All `img` elements must have an `alt` attribute. The text inside `alt` attribute is used for screen readers to improve accessibility and is displayed if the image fails to load.
++ if the image is purely decorative, using an empty `alt` attribute is a best practice.
++ `alt` attribute ideally should not contain special characters unless needed.
+
+** Anchor Elements
+
+You can use `a` elements to link to content outside/inside of your web page.
++ `target` is an anchor attribute that specifies where to where to open the link. The value `_blank` specifies to open the link in a new tab.
++ `href` is an anchor tag attribute that contains the URL address of the link.
++ Place the `href` attribute value with a `#`, also know as a hash symbol to create a dead link `href="#"`
+
+*** Link to External Pages
+
+**** href attribute
+
+`a` elements need a destination web address called an `href` attribute. They also need anchor text.
+
+#+begin_export html
+<a href="https://www.example.com"> this link to example.com </a>
+#+end_export
+
+*** Link to Internal Sections of a Page
+
+`a` elements can also be used to create internal links to jump to different sections within a webpage.
+
++ To create an internal link, you assign a link's `href` attribute to a hash symbol `#` plus the value of the `id` attribute for the element you want to internally link to, usually further down the page.
++ You then need to add the same `id` attribute to the element you are linking to.
++ An `id` is an attribute that uniquely describes an element.
+
+  #+begin_export html
+  <a href = "#contacts-header">Contacts</a> <--! The linking element -->
+  ...
+  <h2 id='contacts-header'>Contacts</h2> <--! The linked element-->
+  #+end_export
+
++ When users click the `Contacts` link, they'll be taken to the section of the webpage with the *Contacts* Heading element.
+
+*** Turn an Image into a Link
+
+You can make elements into links by nesting them within an `a` element.
+
+#+begin_export html
+<a href="#"><img src='https://www.example.com/image.jpg' alt=''></a>
+#+end_export
+
+
+
+** Creating html lists
+
+*** Bulleted Unordered LIST
+
+ul starts with an opening `<ul>` element, followed by any number of `<li>` elements. Finally unordered lists close with a `</ul>`
+
+#+begin_export html
+<ul>
+    <li> milk </li>
+    <li> cheese </li>
+</ul>
+#+end_export
+
+*** An Ordered List
+
+Ordered lists start with an opening `<ol>` element, followed by any number of `<li>` elements. Finally, ordered lists are closed with the `</ol>`
+
+#+begin_export html
+<ol>
+    <li> milk </li>
+    <li> cheese </li>
+</ol>
+#+end_export
+
+** Creating Web form
+
+*** Text Field
+
+`input` elements are a convenient way to get input from your user.
+
+#+begin_export html
+<input type='text'>
+#+end_export
+
+*** Add placeholder Text to a Text Field
+
+Placeholder text is what is displayed in your `input` element before your user has inputted anything.
+
+#+begin_export html
+<input type='text' placeholder='this is a placeholder text'>
+#+end_export
+
++ `input` elements are self closing.
+
+*** Create a Form Element
+
+You can build web forms that actually submit data to a server using nothing more than pure HTML. You can do this by specifying an `action` attribute on your `form` element.
+
+#+begin_export html
+<form action="url-where-you-want-to-submit-form-data">
+  <input>
+</form>
+#+end_export
+
+*** Add a Submit Button to a Form
+
+To add a `submit` button your form, and clicking it will send the data from your form to the URL you specified with your form's `action` attribute.
+
+#+begin_export html
+<button type='submit'>this button submits the form</button>
+#+end_export
+
+*** Use HTML5 to Require a Field
+
++ You can require specific form fields so that your user will not be able to submit your form until he or she filled them out.
++ For example, if you wanted to make a text input field required, you can just add the attribute `required` within your `input` element, like this `<input type='text' required>`
+
+*** Create a Set of Radio Buttons
+
++ radio buttons are used where user has to give only one answer out of multiple options
++ Radio buttons are a type of `input` buttons
++ Each of your radio buttons can be nested within its own `label` element. By wrapping an `input` element inside of a `label` element, it will automatically associate the radio button input with the label element surrounding it.
++ All related radio buttons should have the same `name` attribute to create a radio button group. So, selecting one button will deselect others in the same group, it will ensure only one answer is provided to the question.
+
+  #+begin_export html
+  <label>
+    <input type='radio' name='indoor-outdoor'>Indoor
+  </lable>
+  #+end_export
+
++ It is considered best practice to set a `for` attribute on the `label` element, with a value that matches the value of the `id` attribute of the `input` element. this allows the assistive technologies to create a linked relationship between to create a linked relationship between the label and the related `input` element.
+
+  #+begin_export html
+  <input id='indoor' type='radio' name='indoor-outdoor'>
+  <label for='input'>Indoor</label>
+  #+end_export
+
++ We can also nest the `input` element within the `label` tags:
+
+  #+begin_export html
+  <label for='input'>
+    <input id='indoor' type='radio' name='indoor-outdoor'>
+  </label>
+  #+end_export
+
+*** Create a Set of Checkboxes
+
++ Forms commonly used checkboxes for questions that may have more than one answer.
++ Checkboxes are a type of `input`
++ Each of your checkboxes can be nested within its own `label` element. By wrapping an `input` element inside of a `label` element it will automatically associate the check-box input with the label element surrounding it.
++ All related checkbox inputs should have the same `name` attribute.
++ It is considered best practice to explicitly define the relationship between a checkbox `input` and its corresponding 'label' by setting the 'for' attribute on the 'label' element to match the 'id' attribute of the associated 'input' element.
+
+#+begin_export html
+<label for='loving'><input id='loving' type='checkbox' name='personality'> Loving </label>
+#+end_export
+
+*** Use the value attribute with Radio Buttons and Checkboxes
+
+When a form gets submitted, the data is sent to the server and includes entries for the options selected. Inputs of type `radio` and `checkbox` report their values from `value` attribute.
+
+#+begin_export html
+<label for="indoor">
+  <input id="indoor" value="indoor" type="radio" name="indoor-outdoor">Indoor
+</label>
+<label for="outdoor">
+  <input id="outdoor" value="outdoor" type="radio" name="indoor-outdoor">Outdoor
+</label>
+#+end_export
+
++ When user submits with `indoor` option selected, the form data will include the line: `indoor-outdoor=indoor` from `name` and `value` attributes of the 'indoor' input.
++ If you omit `value` attribute, the submitted form data will use default value `on`. In this scenario, if user clicked the 'indoor' option and submitted the form, data will include `indoor-outdoor=on` which is not useful.
++ The `value` attribute needs to be something to identify the option.
+
+*** Check Radio Buttons and Checkboxes by default
+
+You can set a checkbox or radio button to be checked by default using the `checked` attribute to the inside of an `input` element
+
+#+begin_export html
+<input type='radio' name='test-name' checked>
+#+end_export
+
+
+
+** Nest Many Elements within a Single div Element
+
+The `div` element, also known as a division element, is a general purpose container for other elements. This is probably the most commonly used HTML element of all.
+
++ Just like any other non-self-closing element, you can open a `div` element with `<div>` and close it  on another with line with `</div>`
+
+* Declare the Doctype of an HTML Document
+
++ There are a few elements that give overall structure to your page, and should be included in every HTML document.
+
++ At the top of your document, you need to tell the browser which version of HTML your page is using. HTML is an evolving language, and is updated regularly. Most major browsers support the latest specification, which is HTML5. However, older web pages may use previous versions of the language.
+
++ You tell the browser this information by adding the `<!DOCTYPE ...>` tag on the first line, where the `...` part is the version of HTML. For HTML5, you use `<!DOCTYPE html>`.
+
++ The `!` and uppercase `DOCTYPE` is important, especially for older browsers. The `html` is not case sensitive.
+
++ The rest of your HTML code needs to be wrapped in `html` tags. The opening `<html>` goes directly below the `<!DOCTYPE html>` line, and the closing `</html>` goes at the end of the page.
+
+  #+begin_export html
+  <!DOCTYPE html>
+<html>
+
+</html>
+  #+end_export
+
+
+* Define the Head and Body of an HTML Document
+
++ You can add another level of organization in your HTML document within the `html` tags with the `head` and `body` elements.
++ Any markup with information about your page would go into the `head` tag.
++ Any markup with the content of the page (what displays for a user) would go into the `body` tag.
++ Metadata elements, such as `link`, `meta`, `title`, and `style`, typically go inside the `head` element.
+
+  #+begin_export html
+  <!DOCTYPE html>
+<html>
+  <head>
+    <meta />
+  </head>
+  <body>
+    <div>
+    </div>
+  </body>
+</html>
+  #+end_export
