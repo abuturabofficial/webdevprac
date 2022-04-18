@@ -6,12 +6,6 @@
 #+date: <2022-04-18 Mon>
 #+options: toc:2
 
-* Table of Contents
-:PROPERTIES:
-:TOC:      :include all :ignore this
-:END:
-:CONTENTS:
-
 * HTML Headings
 
 There are six types of headings
