@@ -164,7 +164,7 @@ To add a `submit` button your form, and clicking it will send the data from your
   #+begin_export html
   <label>
     <input type='radio' name='indoor-outdoor'>Indoor
-  </lable>
+  </label>
   #+end_export
 
 + It is considered best practice to set a `for` attribute on the `label` element, with a value that matches the value of the `id` attribute of the `input` element. this allows the assistive technologies to create a linked relationship between to create a linked relationship between the label and the related `input` element.
